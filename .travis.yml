@@ -6,5 +6,4 @@ branches:
   only:
   - master
 script: 
-	- make library
-	- make test
+	- make library && make test
