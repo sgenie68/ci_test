@@ -1,0 +1,4 @@
+language: cpp
+compiler: gcc
+make library && make test
+
