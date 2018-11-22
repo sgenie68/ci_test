@@ -7,3 +7,5 @@ branches:
  - master
 script: 
  - make library && make test
+ - make run_test
+
