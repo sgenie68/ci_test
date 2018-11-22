@@ -4,7 +4,7 @@ This is test for CI
 
 Test results:
 
-[<img alt="Build Status" src="https://travis-ci.org/sgenie68/ci_test.svg?branch=master" height="40">][travis-url]
+[![Build Status](https://travis-ci.org/sgenie68/ci_test.svg?branch=master)](https://travis-ci.org/sgenie68/ci_test)
 
 Issues
 ------
