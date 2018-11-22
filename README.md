@@ -1,4 +1,4 @@
-CI TEST [![GitHub Stars][stars-img]][stars-url] [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url]
+CI TEST [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url]
 =
 This is test for CI
 
