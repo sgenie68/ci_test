@@ -1,20 +1,15 @@
+sudo: false
 language: cpp
 compiler: gcc
 os: osx
 before_install:
 - brew install git-lfs
-
 before_script:
 - git lfs pull
-
 branches:
   only:
   - master
   - stable
-
-matrix:
-	include:
-	- name: "unit test"
-	env: TEST_SUITE=tester
-
-script: make library && make test
+script: 
+	- make library
+	- make test
