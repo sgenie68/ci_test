@@ -1,4 +1,4 @@
-Travis sample [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url]
+Travis sample [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url]]
 
 
 This is test for CI
