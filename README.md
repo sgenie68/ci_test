@@ -1,4 +1,4 @@
-CI TEST [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url]
+CI TEST 
 =
 This is test for CI
 
@@ -11,8 +11,8 @@ Issues
 For any bug reports or feature requests
 please post an issue on GitHub:
 
-* [general travis-hello issues][issues-main-url]
-* [issues specific to travis-hello-modern-cpp][issues-ver-url]
+* [general ci_test issues][issues-main-url]
+* [issues specific to ci_test][issues-ver-url]
 
 Author
 ------
