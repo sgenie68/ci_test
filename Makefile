@@ -9,6 +9,9 @@ library:
 test: 
 	$(MAKE) -C test
 
+run_test:
+	$(MAKE) -C test run_test
+
 .PHONY: library test
 
 clean:
