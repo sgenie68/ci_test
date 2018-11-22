@@ -3,7 +3,7 @@ language: cpp
 compiler: gcc
 os: osx
 branches:
-  only:
-  - master
+ only:
+ - master
 script: 
-	- make library && make test
+ - make library && make test
