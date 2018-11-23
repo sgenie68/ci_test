@@ -7,6 +7,10 @@ branches:
 os: 
   - osx
   - linux
+matrix:
+  include:
+  - os: osx
+  - os: linux
 script: 
  - make library && make test
  - make run_test
