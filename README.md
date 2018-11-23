@@ -1,4 +1,4 @@
-CI TEST [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url] 
+#CI TEST
 =
 This is test for CI
 
