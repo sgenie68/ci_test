@@ -8,7 +8,7 @@ os:
   - osx
   - linux
 before_install:
-  - echo  "Using OS: $TRAVIS_OS_NAME"
+  - bash "echo  'Using OS: $TRAVIS_OS_NAME'"
 script: 
  - make library && make test
  - make run_test
