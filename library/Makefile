@@ -1,9 +1,14 @@
 GCC=g++
-#CFLAGS=-fpic
-#LFLAGS=-shared
+
+UNAME := $(shell uname)
+
+CFLAGS=-fpic
+LFLAGS=-shared
+
+ifeq ($(UNAME), Darwin)
 CFLAGS=
 LFLAGS=-dynamiclib
-
+endif
 
 all: library
 

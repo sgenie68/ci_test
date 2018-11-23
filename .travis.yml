@@ -1,7 +1,7 @@
 sudo: false
 language: cpp
 compiler: gcc
-os: osx
+os: linux
 branches:
  only:
  - master
