@@ -1,6 +1,7 @@
 #!/bin/bash
 
-MATCH="25 1000"
+
+MATCH="25 1000.10 30"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
 RES=$(./tester)
 

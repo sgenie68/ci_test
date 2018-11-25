@@ -17,3 +17,4 @@ run_test:
 clean:
 	$(MAKE) -C library clean
 	$(MAKE) -C test clean
+	rm -rf include lib
