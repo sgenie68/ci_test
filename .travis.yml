@@ -1,13 +1,16 @@
 sudo: false
 language: cpp
-compiler: gcc
 branches:
  only:
  - master
 matrix:
   include:
-  - os: osx
-  - os: linux
+  - os: 
+     osx
+  - os: 
+     linux
+install:
+  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
 script: 
  - make library && make test
  - make run_test
