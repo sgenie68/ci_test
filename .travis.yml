@@ -6,7 +6,7 @@ branches:
 addons:
   apt:
     packages:
-      - gfortran-6
+      - gfortran
       - binutils
       - cmake
 	  - g++
