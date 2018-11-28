@@ -9,7 +9,7 @@ addons:
       - gfortran
       - binutils
       - cmake
-	  - g++
+      - g++
       - python-pip
 
 env: FC=gfortran
