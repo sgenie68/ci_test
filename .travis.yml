@@ -16,10 +16,12 @@ env: FC=gfortran
 
 matrix:
   include:
-  - os: 
-     osx
-  - os: 
-     linux
+  - os: osx
+     language: bash
+  - os: linux
+     language: bash
+  - os: windows
+     language: bash
 install:
   - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
 script: 
