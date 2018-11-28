@@ -1,4 +1,4 @@
-sudo: true
+sudo: required
 language: cpp
 branches:
  only:
@@ -18,11 +18,8 @@ env: FC=gfortran
 matrix:
   include:
   - os: osx
-     language: sh
   - os: linux
-     language: sh
   - os: windows
-     language: sh
 install:
   - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
 script: 
