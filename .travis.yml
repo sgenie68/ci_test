@@ -3,6 +3,7 @@ language: cpp
 branches:
  only:
  - master
+
 addons:
   apt:
     packages:
@@ -17,11 +18,11 @@ env: FC=gfortran
 matrix:
   include:
   - os: osx
-     language: bash
+     language: sh
   - os: linux
-     language: bash
+     language: sh
   - os: windows
-     language: bash
+     language: sh
 install:
   - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
 script: 
