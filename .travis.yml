@@ -1,8 +1,19 @@
-sudo: false
+sudo: required
 language: cpp
 branches:
  only:
  - master
+addons:
+  apt:
+    packages:
+      - gfortran-6
+      - binutils
+      - cmake
+	  - g++
+      - python-pip
+
+env: FC=gfortran
+
 matrix:
   include:
   - os: 
