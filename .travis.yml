@@ -26,6 +26,7 @@ script:
  - mkdir build
  - cd build
  - cmake ..
+ - make
  - cp ../test/run.sh .
  - bash run.sh
 
