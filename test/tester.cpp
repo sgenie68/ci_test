@@ -1,6 +1,18 @@
 #include <stdio.h>
-#include "include/library.h"
-#include "include/deplib.h"
+#include "library.h"
+//#include "include/deplib.h"
+
+int depfunc1(int a)
+{
+	return a+a;
+}
+
+int depfunc2(int a)
+{
+	return 3*a;
+}
+
+
 
 int main()
 {

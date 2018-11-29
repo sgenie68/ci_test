@@ -23,6 +23,10 @@ matrix:
 install:
   - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
 script: 
- - make library && make test
- - make run_test
+ - mkdir build
+ - cd build
+ - cmake ..
+ - cp ../test/run.sh .
+ - bash run.sh
+
 
