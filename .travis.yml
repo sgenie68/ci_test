@@ -10,6 +10,7 @@ addons:
       - gfortran
       - binutils
       - cmake
+	  - make
       - g++
       - python-pip
 
