@@ -37,7 +37,7 @@ matrix:
        - cmake ..  && make
        - cp ../test/run.sh . &&  bash run.sh
 
-#  - os: windows
+  - os: windows
 #     addons:
 #      apt:
 #        packages:
@@ -46,11 +46,12 @@ matrix:
 #          - make
 #          - g++
 #          - python-pip
-#     install: choco install mingw --version 4.9.3 --force
-#     script: 
-#       - mkdir build && cd build
-#       - cmake ..  && mingw32-make
-#       - cp ../test/run.sh .  && bash run.sh
+     install: 
+         - choco install mingw --version 4.9.3 --force
+     script: 
+       - mkdir build && cd build
+       - cmake ..  && mingw32-make
+       - cp ../test/run.sh .  && bash run.sh
 
 
 
