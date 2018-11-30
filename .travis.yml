@@ -15,7 +15,7 @@ matrix:
           - gfortran
           - binutils
           - cmake
-	      - make
+          - make
           - g++
           - python-pip
     script: 
@@ -30,7 +30,7 @@ matrix:
           - gfortran
           - binutils
           - cmake
-	      - make
+          - make
           - g++
           - python-pip
     install:
@@ -47,11 +47,11 @@ matrix:
         packages:
           - gfortran
           - cmake
-	      - make
+          - make
           - g++
           - python-pip
-    install: choco install mingw --version 4.9.3 --force
-    script: 
+     install: choco install mingw --version 4.9.3 --force
+     script: 
        - mkdir build && cd build
        - cmake ..
        - mingw32-make
