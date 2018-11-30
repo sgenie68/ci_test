@@ -13,9 +13,9 @@ test: off
 #
 # Setup Cygwin
 #
-install:
-  - ps: 'Start-FileDownload "https://cygwin.com/setup-x86_64.exe" -FileName "setup-x86_64.exe"'
-  - 'setup-x86_64.exe --quiet-mode --no-shortcuts --only-site --root "%CYG_ROOT%" --site "%CYG_MIRROR%" --local-package-dir "%CYG_ROOT%\var\cache\setup" --packages "%CYG_PACKAGES%"'
+#install:
+#  - ps: 'Start-FileDownload "https://cygwin.com/setup-x86_64.exe" -FileName "setup-x86_64.exe"'
+#  - 'setup-x86_64.exe --quiet-mode --no-shortcuts --only-site --root "%CYG_ROOT%" --site "%CYG_MIRROR%" --local-package-dir "%CYG_ROOT%\var\cache\setup" --packages "%CYG_PACKAGES%"'
 
 #
 # Build
@@ -33,5 +33,5 @@ build_script:
 
   #
   - mkdir build && cd build
-  - cmake ..  && ls -la && msbuild /p:Configuration=Release ci_test.sln
+  - cmake ..  && ls -la && msbuild /p:Configuration=Release /p:Platform="Any CPU" ci_test.sln
   - cp ../test/run.sh .  && bash run.sh
