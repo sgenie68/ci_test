@@ -40,7 +40,8 @@ matrix:
   - os: windows
     script:
       - mkdir build && cd build
-      - cmake ..  && mingw32-make
+      - cmake ..  && ls -la && mingw32-make
+      - cp ../test/run.sh .  && bash run.sh
 #     addons:
 #      apt:
 #        packages:
