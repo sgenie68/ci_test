@@ -33,5 +33,5 @@ build_script:
 
   #
   - mkdir build && cd build
-  - cmake ..  && ls -la && msbuild /p:Configuration=Release /p:Platform="Any CPU" ci_test.sln
+  - cmake ..  && ls -la && type ci_test.sln && msbuild /p:Configuration=Release /p:Platform="Any CPU" ci_test.sln
   - cp ../test/run.sh .  && bash run.sh
