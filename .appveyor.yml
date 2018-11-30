@@ -33,5 +33,5 @@ build_script:
 
   #
   - mkdir build && cd build
-  - cmake ..  && ls -la && type ci_test.sln && msbuild ci_test.sln
+  - cmake ..  && msbuild ci_test.sln && ls -la && ./tester.exe
   - cp ../test/run.sh .  && bash run.sh
