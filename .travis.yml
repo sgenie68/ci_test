@@ -39,7 +39,7 @@ matrix:
 
   - os: windows
     script:
-	  - ls
+      - ls
 #     addons:
 #      apt:
 #        packages:
