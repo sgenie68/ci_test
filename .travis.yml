@@ -4,31 +4,59 @@ branches:
  only:
  - master
 
-addons:
-  apt:
-    packages:
-      - gfortran
-      - binutils
-      - cmake
-	  - make
-      - g++
-      - python-pip
-
 env: FC=gfortran
 
 matrix:
   include:
   - os: osx
+    addons:
+      apt:
+        packages:
+          - gfortran
+          - binutils
+          - cmake
+	      - make
+          - g++
+          - python-pip
+    script: 
+       - mkdir build && cd build
+       - cmake ..
+       - make
+       - cp ../test/run.sh . &&  bash run.sh
   - os: linux
+    addons:
+      apt:
+        packages:
+          - gfortran
+          - binutils
+          - cmake
+	      - make
+          - g++
+          - python-pip
+    install:
+      - if [ $travis_os_name = linux ]; then sudo apt-get install g++ cmake; fi
+    script: 
+       - mkdir build && cd build
+       - cmake ..
+       - make
+       - cp ../test/run.sh . &&  bash run.sh
+
   - os: windows
-install:
-  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install g++ cmake; fi
-script: 
- - mkdir build
- - cd build
- - cmake ..
- - make
- - cp ../test/run.sh .
- - bash run.sh
+     addons:
+      apt:
+        packages:
+          - gfortran
+          - cmake
+	      - make
+          - g++
+          - python-pip
+    install: choco install mingw --version 4.9.3 --force
+    script: 
+       - mkdir build && cd build
+       - cmake ..
+       - mingw32-make
+       - cp ../test/run.sh .  && bash run.sh
+
+
 
 
