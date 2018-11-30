@@ -42,7 +42,7 @@ matrix:
     solution: ci_test.sln
     script:
       - mkdir build && cd build
-      - cmake ..  && ls -la && xbuild /p:Configuration=Release ci_test.sln
+      - cmake ..  && ls -la && msbuild ci_test.sln
       - cp ../test/run.sh .  && bash run.sh
 #     addons:
 #      apt:
