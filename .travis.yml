@@ -1,10 +1,8 @@
 sudo: required
-language: cpp
+language: bash
 branches:
  only:
  - master
-
-env: FC=gfortran
 
 matrix:
   include:
@@ -20,8 +18,7 @@ matrix:
           - python-pip
     script: 
        - mkdir build && cd build
-       - cmake ..
-       - make
+       - cmake ..  && make
        - cp ../test/run.sh . &&  bash run.sh
   - os: linux
     addons:
@@ -37,8 +34,7 @@ matrix:
       - if [ $travis_os_name = linux ]; then sudo apt-get install g++ cmake; fi
     script: 
        - mkdir build && cd build
-       - cmake ..
-       - make
+       - cmake ..  && make
        - cp ../test/run.sh . &&  bash run.sh
 
   - os: windows
@@ -53,8 +49,7 @@ matrix:
      install: choco install mingw --version 4.9.3 --force
      script: 
        - mkdir build && cd build
-       - cmake ..
-       - mingw32-make
+       - cmake ..  && mingw32-make
        - cp ../test/run.sh .  && bash run.sh
 
 
