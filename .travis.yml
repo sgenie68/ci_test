@@ -38,9 +38,11 @@ matrix:
        - cp ../test/run.sh . &&  bash run.sh
 
   - os: windows
+    language: cpp
+    solution: ci_test.sln
     script:
       - mkdir build && cd build
-      - cmake ..  && ls -la && mingw32-make
+      - cmake ..  && ls -la && xbuild /p:Configuration=Release ci_test.sln
       - cp ../test/run.sh .  && bash run.sh
 #     addons:
 #      apt:
