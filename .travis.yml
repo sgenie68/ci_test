@@ -38,16 +38,18 @@ matrix:
        - cp ../test/run.sh . &&  bash run.sh
 
   - os: windows
-     addons:
-      apt:
-        packages:
-          - gfortran
-          - cmake
-          - make
-          - g++
-          - python-pip
-     install: 
-         - choco install mingw --version 4.9.3 --force
+    script:
+	  - ls
+#     addons:
+#      apt:
+#        packages:
+#          - gfortran
+#          - cmake
+#          - make
+#          - g++
+#          - python-pip
+#     install: 
+#         - choco install mingw --version 4.9.3 --force
 #     script: 
 #       - mkdir build && cd build
 #       - cmake ..  && mingw32-make
